@@ -1,11 +1,8 @@
 {
   "name": "npm-user-validate",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "User validations for npm",
   "main": "npm-user-validate.js",
-  "scripts": {
-    "test": "npm test"
-  },
   "devDependencies": {
     "tap": "0.4.3"
   },
@@ -15,7 +12,8 @@
   "repository": "",
   "keywords": [
     "npm",
-    "validation"
+    "validation",
+    "registry"
   ],
   "author": "Robert Kowalski <rok@kowalski.gd>",
   "repository": {

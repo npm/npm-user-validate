@@ -9,7 +9,7 @@ var requirements = exports.requirements = {
     dot: 'Username may not start with "."'
   },
   password: {
-    badchars: 'Password passwords cannot contain these characters: \'!:@"'
+    badchars: 'Password cannot contain these characters: \'!:@"'
   },
   email: {
     valid: 'Email must be an email address'

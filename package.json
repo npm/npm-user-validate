@@ -1,6 +1,6 @@
 {
   "name": "npm-user-validate",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "User validations for npm",
   "main": "npm-user-validate.js",
   "devDependencies": {

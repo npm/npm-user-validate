@@ -9,16 +9,15 @@
   "scripts": {
     "test": "tap test/*.js"
   },
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/npm/npm-registry-mock.git"
+  },
   "keywords": [
     "npm",
     "validation",
     "registry"
   ],
   "author": "Robert Kowalski <rok@kowalski.gd>",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/robertkowalski/npm-user-validate"
-  },
   "license": "BSD"
 }

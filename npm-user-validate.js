@@ -31,7 +31,7 @@ function username (un) {
 }
 
 function email (em) {
-  if (!em.match(/^.+@.+\..+$/)) {
+  if (!em.match(/^[^,]+@[^,]+\.[^,]+$/)) {
     return new Error(requirements.email.valid)
   }
 

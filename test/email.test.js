@@ -19,6 +19,18 @@ test('email misses a string before the @', function (t) {
   t.end()
 })
 
+test('email has a comma before the @', function (t) {
+  err = v('first,last@domain.com')
+  t.type(err, 'object')
+  t.end()
+})
+
+test('email has a comma after the @', function (t) {
+  err = v('first.last@domain,com')
+  t.type(err, 'object')
+  t.end()
+})
+
 test('email is ok', function (t) {
   err = v('name@domain.com')
   t.type(err, 'null')

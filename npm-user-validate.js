@@ -4,9 +4,9 @@ exports.username = username
 
 var requirements = exports.requirements = {
   username: {
-    lowerCase: 'Username must be lowercase',
-    urlSafe: 'Username may not contain non-url-safe chars',
-    dot: 'Username may not start with "."'
+    lowerCase: 'Name must be lowercase',
+    urlSafe: 'Name may not contain non-url-safe chars',
+    dot: 'Name may not start with "."'
   },
   password: {},
   email: {

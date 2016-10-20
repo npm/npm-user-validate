@@ -17,7 +17,7 @@ var requirements = exports.requirements = {
 
 var illegalCharacterRe = new RegExp('([' + [
   "'"
-].join(',') + '])')
+].join() + '])')
 
 function username (un) {
   if (un !== un.toLowerCase()) {

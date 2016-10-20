@@ -15,6 +15,13 @@ test('username may not contain non-url-safe chars', function (t) {
   t.end()
 })
 
+test('username may not contain illegal characters', function (t) {
+  var err = v("ben's")
+  t.type(err, 'object')
+  t.match(err.message, /illegal character "'"/)
+  t.end()
+})
+
 test('username may not start with "."', function (t) {
   var err = v('.username')
   t.type(err, 'object')
@@ -27,13 +34,13 @@ test('username may not be longer than 214 characters', function (t) {
   t.type(err, 'object')
   t.match(err.message, /less than or equal to 214/)
   t.end()
-});
+})
 
 test('username may be as long as 214 characters', function (t) {
   var err = v('bacon-ipsum-dolor-amet-tongue-short-loin-landjaeger-tenderloin-ball-tip-pork-loin-porchetta-pig-pork-chop-beef-ribs-pork-belly--shankle-t-bone-turducken-tongue-landjaeger-pork-loin-beef-chicken-short-loin-porchetta')
   t.type(err, 'null')
   t.end()
-});
+})
 
 test('username is ok', function (t) {
   var err = v('ente')

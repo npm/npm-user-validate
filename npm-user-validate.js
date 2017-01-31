@@ -1,6 +1,7 @@
 exports.email = email
 exports.pw = pw
 exports.username = username
+exports.firstLastName = firstLastName
 
 var requirements = exports.requirements = {
   username: {
@@ -12,6 +13,9 @@ var requirements = exports.requirements = {
   password: {},
   email: {
     valid: 'Email must be an email address'
+  },
+  firstLastName: {
+    valid: 'Valid first and last names must not include < or >'
   }
 };
 
@@ -45,4 +49,20 @@ function email (em) {
 
 function pw (pw) {
   return null
+}
+
+function firstLastName (name) {
+  if (typeof name !== "string" || name === "") {
+    return new Error(requirements.firstLastName.valid)
+  }
+
+  if (name.indexOf("<") > -1) {
+    return new Error(requirements.firstLastName.valid)
+  }
+
+  if (name.indexOf(">") > -1) {
+    return new Error(requirements.firstLastName.valid)
+  }
+
+  return null;
 }

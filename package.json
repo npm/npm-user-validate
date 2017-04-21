@@ -22,5 +22,8 @@
     "registry"
   ],
   "author": "Robert Kowalski <rok@kowalski.gd>",
-  "license": "BSD-2-Clause"
+  "license": "BSD-2-Clause",
+  "files": [
+    "npm-user-validate.js"
+  ]
 }

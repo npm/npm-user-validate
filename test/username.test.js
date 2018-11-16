@@ -47,3 +47,9 @@ test('username is ok', function (t) {
   t.type(err, 'null')
   t.end()
 })
+
+test('uri-safe email address is ok', function (t) {
+  var err = v('user%40domain.com')
+  t.type(err, 'null')
+  t.end()
+})

@@ -24,7 +24,7 @@ function username (un) {
     return new Error(requirements.username.lowerCase)
   }
 
-  if (un !== encodeURIComponent(un)) {
+  if (un !== encodeURIComponent(decodeURIComponent(un))) {
     return new Error(requirements.username.urlSafe)
   }
 

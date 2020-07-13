@@ -5,7 +5,7 @@
   "main": "npm-user-validate.js",
   "devDependencies": {
     "standard": "^8.4.0",
-    "standard-version": "^3.0.0",
+    "standard-version": "^8.0.1",
     "tap": "^7.1.2"
   },
   "scripts": {

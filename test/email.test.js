@@ -7,6 +7,13 @@ test('email misses an @', function (t) {
   t.end()
 })
 
+test('email is longer then 254 characters', function (t) {
+  var str = '@'.repeat(255)
+  var err = v(str)
+  t.type(err, 'object')
+  t.end()
+})
+
 test('email misses a dot', function (t) {
   var err = v('name@domain')
   t.type(err, 'object')

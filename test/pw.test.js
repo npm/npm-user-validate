@@ -1,5 +1,5 @@
 var test = require('tap').test
-var v = require('../npm-user-validate.js').pw
+var v = require('../').pw
 
 test('pw contains a \'', function (t) {
   var err = v('\'')

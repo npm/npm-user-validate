@@ -1,5 +1,5 @@
 var test = require('tap').test
-var v = require('../npm-user-validate.js').email
+var v = require('../').email
 
 test('email misses an @', function (t) {
   var err = v('namedomain')

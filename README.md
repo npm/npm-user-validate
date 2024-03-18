@@ -1,5 +1,5 @@
-[![Build Status](https://travis-ci.org/npm/npm-user-validate.png?branch=master)](https://travis-ci.org/npm/npm-user-validate)
-[![devDependency Status](https://david-dm.org/npm/npm-user-validate/dev-status.png)](https://david-dm.org/npm/npm-user-validate#info=devDependencies)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/npm/npm-user-validate/ci.yml?branch=main)](https://github.com/npm/npm-user-validate)
+[![Dependency Status](https://img.shields.io/librariesio/github/npm/npm-user-validate)](https://libraries.io/npm/npm-user-validate)
 
 # npm-user-validate
 

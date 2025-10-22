@@ -1,5 +1,14 @@
 # Changelog
 
+## [4.0.0](https://github.com/npm/npm-user-validate/compare/v3.0.0...v4.0.0) (2025-10-22)
+### ⚠️ BREAKING CHANGES
+* `npm-user-validate` now supports node `^20.17.0 || >=22.9.0`
+### Bug Fixes
+* [`b0ac0b9`](https://github.com/npm/npm-user-validate/commit/b0ac0b9837632dda20769d7152b54d2f5a2e4db3) [#88](https://github.com/npm/npm-user-validate/pull/88) align to npm 11 node engine range (#88) (@owlstronaut)
+### Chores
+* [`93b35f4`](https://github.com/npm/npm-user-validate/commit/93b35f4369bd563ab4b01fabbc69b39a3c4debe5) [#82](https://github.com/npm/npm-user-validate/pull/82) postinstall workflow updates (#82) (@owlstronaut)
+* [`404eb52`](https://github.com/npm/npm-user-validate/commit/404eb52321d42a44e2c657906a39eaed57e45afe) [#87](https://github.com/npm/npm-user-validate/pull/87) bump @npmcli/template-oss from 4.26.0 to 4.27.1 (#87) (@dependabot[bot], @npm-cli-bot)
+
 ## [3.0.0](https://github.com/npm/npm-user-validate/compare/v2.0.1...v3.0.0) (2024-09-03)
 ### ⚠️ BREAKING CHANGES
 * `npm-user-validate` now supports node `^18.17.0 || >=20.5.0`

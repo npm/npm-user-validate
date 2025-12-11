@@ -1,32 +1,28 @@
-var test = require('tap').test
-var v = require('../').pw
+const { test } = require('node:test')
+const assert = require('node:assert')
+const v = require('../').pw
 
-test('pw contains a \'', function (t) {
-  var err = v('\'')
-  t.type(err, 'null')
-  t.end()
+test('pw contains a \'', function () {
+  const err = v('\'')
+  assert.strictEqual(err, null)
 })
 
-test('pw contains a :', function (t) {
-  var err = v(':')
-  t.type(err, 'null')
-  t.end()
+test('pw contains a :', function () {
+  const err = v(':')
+  assert.strictEqual(err, null)
 })
 
-test('pw contains a @', function (t) {
-  var err = v('@')
-  t.notOk(err, 'null')
-  t.end()
+test('pw contains a @', function () {
+  const err = v('@')
+  assert.strictEqual(err, null)
 })
 
-test('pw contains a "', function (t) {
-  var err = v('"')
-  t.type(err, 'null')
-  t.end()
+test('pw contains a "', function () {
+  const err = v('"')
+  assert.strictEqual(err, null)
 })
 
-test('pw is ok', function (t) {
-  var err = v('duck')
-  t.type(err, 'null')
-  t.end()
+test('pw is ok', function () {
+  const err = v('duck')
+  assert.strictEqual(err, null)
 })

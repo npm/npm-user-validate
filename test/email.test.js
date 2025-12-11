@@ -1,33 +1,29 @@
-var test = require('tap').test
-var v = require('../').email
+const { test } = require('node:test')
+const assert = require('node:assert')
+const v = require('../').email
 
-test('email misses an @', function (t) {
-  var err = v('namedomain')
-  t.type(err, 'object')
-  t.end()
+test('email misses an @', function () {
+  const err = v('namedomain')
+  assert.strictEqual(typeof err, 'object')
 })
 
-test('email is longer then 254 characters', function (t) {
-  var str = '@'.repeat(255)
-  var err = v(str)
-  t.type(err, 'object')
-  t.end()
+test('email is longer then 254 characters', function () {
+  const str = '@'.repeat(255)
+  const err = v(str)
+  assert.strictEqual(typeof err, 'object')
 })
 
-test('email misses a dot', function (t) {
-  var err = v('name@domain')
-  t.type(err, 'object')
-  t.end()
+test('email misses a dot', function () {
+  const err = v('name@domain')
+  assert.strictEqual(typeof err, 'object')
 })
 
-test('email misses a string before the @', function (t) {
-  var err = v('@domain')
-  t.type(err, 'object')
-  t.end()
+test('email misses a string before the @', function () {
+  const err = v('@domain')
+  assert.strictEqual(typeof err, 'object')
 })
 
-test('email is ok', function (t) {
-  var err = v('name@domain.com')
-  t.type(err, 'null')
-  t.end()
+test('email is ok', function () {
+  const err = v('name@domain.com')
+  assert.strictEqual(err, null)
 })

@@ -1,51 +1,45 @@
-var test = require('tap').test
-var v = require('../').username
+const { test } = require('node:test')
+const assert = require('node:assert')
+const v = require('../').username
 
-test('username must be lowercase', function (t) {
-  var err = v('ERRR')
-  t.type(err, 'object')
-  t.match(err.message, /lowercase/)
-  t.end()
+test('username must be lowercase', function () {
+  const err = v('ERRR')
+  assert.strictEqual(typeof err, 'object')
+  assert.match(err.message, /lowercase/)
 })
 
-test('username may not contain non-url-safe chars', function (t) {
-  var err = v('f  ')
-  t.type(err, 'object')
-  t.match(err.message, /url-safe/)
-  t.end()
+test('username may not contain non-url-safe chars', function () {
+  const err = v('f  ')
+  assert.strictEqual(typeof err, 'object')
+  assert.match(err.message, /url-safe/)
 })
 
-test('username may not contain illegal characters', function (t) {
-  var err = v("ben's")
-  t.type(err, 'object')
-  t.match(err.message, /illegal character "'"/)
-  t.end()
+test('username may not contain illegal characters', function () {
+  const err = v("ben's")
+  assert.strictEqual(typeof err, 'object')
+  assert.match(err.message, /illegal character "'"/)
 })
 
-test('username may not start with "."', function (t) {
-  var err = v('.username')
-  t.type(err, 'object')
-  t.match(err.message, /start with.*\./)
-  t.end()
+test('username may not start with "."', function () {
+  const err = v('.username')
+  assert.strictEqual(typeof err, 'object')
+  assert.match(err.message, /start with.*\./)
 })
 
-test('username may not be longer than 214 characters', function (t) {
+test('username may not be longer than 214 characters', function () {
   // eslint-disable-next-line max-len
-  var err = v('bacon-ipsum-dolor-amet-tongue-short-loin-landjaeger-tenderloin-ball-tip-pork-loin-porchetta-pig-pork-chop-beef-ribs-pork-belly--shankle-t-bone-turducken-tongue-landjaeger-pork-loin-beef-chicken-short-loin-and-pickle')
-  t.type(err, 'object')
-  t.match(err.message, /less than or equal to 214/)
-  t.end()
+  const err = v('bacon-ipsum-dolor-amet-tongue-short-loin-landjaeger-tenderloin-ball-tip-pork-loin-porchetta-pig-pork-chop-beef-ribs-pork-belly--shankle-t-bone-turducken-tongue-landjaeger-pork-loin-beef-chicken-short-loin-and-pickle')
+  assert.strictEqual(typeof err, 'object')
+  assert.match(err.message, /less than or equal to 214/)
 })
 
-test('username may be as long as 214 characters', function (t) {
+test('username may be as long as 214 characters', function () {
   // eslint-disable-next-line max-len
-  var err = v('bacon-ipsum-dolor-amet-tongue-short-loin-landjaeger-tenderloin-ball-tip-pork-loin-porchetta-pig-pork-chop-beef-ribs-pork-belly--shankle-t-bone-turducken-tongue-landjaeger-pork-loin-beef-chicken-short-loin-porchetta')
-  t.type(err, 'null')
-  t.end()
+  const err = v('bacon-ipsum-dolor-amet-tongue-short-loin-landjaeger-tenderloin-ball-tip-pork-loin-porchetta-pig-pork-chop-beef-ribs-pork-belly--shankle-t-bone-turducken-tongue-landjaeger-pork-loin-beef-chicken-short-loin-porchetta')
+  assert.strictEqual(err, null)
 })
 
-test('username is ok', function (t) {
-  var err = v('ente')
-  t.type(err, 'null')
-  t.end()
+test('username is ok', function () {
+  const err = v('ente')
+  assert.strictEqual(err, null)
 })

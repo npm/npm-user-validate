@@ -1,5 +1,19 @@
 # Changelog
 
+## [5.0.0](https://github.com/npm/npm-user-validate/compare/v4.0.0...v5.0.0) (2026-05-08)
+### ⚠️ BREAKING CHANGES
+* `npm-user-validate` now supports node `^22.22.2 || ^24.15.0 || >=26.0.0`
+* template-oss-apply
+### Features
+* [`8fa216d`](https://github.com/npm/npm-user-validate/commit/8fa216dd8ec88b5678ff029f5cdefa1aef21a03b) [#98](https://github.com/npm/npm-user-validate/pull/98) bump to new node engine range (@owlstronaut)
+* [`b9b2857`](https://github.com/npm/npm-user-validate/commit/b9b2857e774894dc679964a3314dd93ed2a72902) [#98](https://github.com/npm/npm-user-validate/pull/98) template-oss-apply (@owlstronaut)
+### Chores
+* [`94508fb`](https://github.com/npm/npm-user-validate/commit/94508fbc16b5cc59210c882d3f912d08889809ba) [#98](https://github.com/npm/npm-user-validate/pull/98) template-oss-apply (@owlstronaut)
+* [`ffc2d02`](https://github.com/npm/npm-user-validate/commit/ffc2d021ddc9bc10990c9a1a4aa5649905f45409) [#93](https://github.com/npm/npm-user-validate/pull/93) remove tap (@owlstronaut)
+* [`fafabef`](https://github.com/npm/npm-user-validate/commit/fafabef985dfa587f05c8e58bebfdf61c92db665) [#93](https://github.com/npm/npm-user-validate/pull/93) swap from tap to built-in node:test (@owlstronaut)
+* [`b258569`](https://github.com/npm/npm-user-validate/commit/b25856915d6871c1d0b4618b02dbd342c3ba725a) [#90](https://github.com/npm/npm-user-validate/pull/90) bump @npmcli/eslint-config from 5.1.0 to 6.0.0 (#90) (@dependabot[bot])
+* [`ba62a53`](https://github.com/npm/npm-user-validate/commit/ba62a53b8f39f8df3f31442ee44e4d3aea38e333) [#96](https://github.com/npm/npm-user-validate/pull/96) bump @npmcli/template-oss from 4.29.0 to 4.30.0 (#96) (@dependabot[bot], @npm-cli-bot)
+
 ## [4.0.0](https://github.com/npm/npm-user-validate/compare/v3.0.0...v4.0.0) (2025-10-22)
 ### ⚠️ BREAKING CHANGES
 * `npm-user-validate` now supports node `^20.17.0 || >=22.9.0`
